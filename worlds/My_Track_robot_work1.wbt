@@ -1,0 +1,758 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/BungalowStyleHouse.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.25100769963546044 -0.04992107896134421 0.9666969642028725 3.135792729834022
+  position 5.9365584498362285 -10.467288151860396 3.9497415539412284
+}
+Background {
+  skyColor [
+    0.15 0.45 1
+  ]
+  luminosity 0
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+Floor {
+  size 100 80
+  appearance Parquetry {
+    type "light strip"
+    textureTransform TextureTransform {
+      scale 0.1 0.1
+    }
+  }
+}
+RectangleArena {
+  translation -2 -0.22 0.02
+  rotation 0 0 1 1.5708
+  floorSize 25 10
+  floorTileSize 24 10
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "C:/Users/27424/Desktop/map3.png"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+Robot {
+  translation 2.204151446921618 -8.883059571820775 0.2981101252112601
+  rotation 3.027002359610751e-09 3.654790813536193e-05 -0.9999999993321252 0.00016435268558870477
+  children [
+    Solid {
+      translation 0 0 -0.2
+      children [
+        DEF Main_Body Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.3 0.3 0.1
+          }
+        }
+      ]
+      name "Main_body"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3653.1825599995154
+        anchor 0.19 -0.1 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "Motor_Front_Left"
+        }
+      ]
+      endPoint Solid {
+        translation 0.19 -0.1 -0.25
+        rotation 0.25097250107900465 -0.9348931454264152 -0.25097332594690763 1.6380690754956881
+        children [
+          DEF Wheel_1 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.03
+            }
+          }
+        ]
+        name "Wheel_Front_Left"
+        boundingObject USE Wheel_1
+        physics Physics {
+        }
+        linearVelocity 3.315567764281316e-15 7.191064373683951e-16 2.692491419161632e-10
+        angularVelocity -5.916560725946428e-15 4.383168309568886e-14 5.847594672517852e-15
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3559.112859402724
+        anchor -0.19 -0.1 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "Motor_Front_Right"
+        }
+      ]
+      endPoint Solid {
+        translation -0.19 -0.1 -0.25
+        rotation -0.3831924902912023 -0.8404327900061742 0.38319217224111535 1.743766616949966
+        children [
+          DEF Wheel_2 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.03
+            }
+          }
+        ]
+        name "Wheel_Front_Right"
+        boundingObject USE Wheel_2
+        physics Physics {
+        }
+        linearVelocity -1.743877919857991e-15 -2.9027896533583736e-16 2.6924964452231286e-10
+        angularVelocity -4.628388883252536e-15 8.766367207135375e-14 5.476253111036595e-15
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3647.9799974923344
+        anchor 0.19 0.1 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "Motor_Back_Left"
+        }
+      ]
+      endPoint Solid {
+        translation 0.19 0.1 -0.25
+        rotation 0.24219948660536506 -0.9395096695674874 -0.24220030858214925 1.6331535597537186
+        children [
+          DEF Wheel_3 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.03
+            }
+          }
+        ]
+        name "Wheel_Back_Left"
+        boundingObject USE Wheel_3
+        physics Physics {
+        }
+        linearVelocity 4.473572150636356e-15 5.150550644285165e-16 2.6925064973465326e-10
+        angularVelocity -5.1616885882384175e-15 6.574768166794123e-14 5.255604735996198e-15
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3554.7552561875063
+        anchor -0.19 0.1 -0.25
+      }
+      device [
+        RotationalMotor {
+          name "Motor_Back_Right"
+        }
+      ]
+      endPoint Solid {
+        translation -0.19 0.1 -0.25
+        rotation -0.3902879134384374 -0.8338770473504235 0.39028760488389896 1.7514755164905051
+        children [
+          DEF Wheel_4 Shape {
+            appearance PBRAppearance {
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.03
+            }
+          }
+        ]
+        name "Wheel_Back_Right"
+        boundingObject USE Wheel_4
+        physics Physics {
+        }
+        linearVelocity -1.7496799096472803e-15 -1.8263163271048073e-16 2.692481367037785e-10
+        angularVelocity -5.222085732482896e-15 4.3831713854769756e-14 6.131007796020333e-15
+      }
+    }
+    Solid {
+      translation 2.99183e-08 -0.14 -0.16
+      rotation 0.577349935856137 0.577349935856137 0.5773509358560258 -2.094395307179586
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.02
+            radius 0.01
+          }
+        }
+      ]
+      name "Camera"
+    }
+    Camera {
+      translation 1.94481e-07 -0.15 -0.16
+      rotation -2.17518e-07 7.69303e-07 1 -1.5707953071795862
+    }
+    Solid {
+      translation 0.04 -0.14 -0.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.003
+          }
+        }
+      ]
+      name "Infrared_Sensor_Front_Left"
+    }
+    Solid {
+      translation 0 -0.14 -0.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.003
+          }
+        }
+      ]
+      name "Infrared_Sensor_Front_Middle"
+    }
+    Solid {
+      translation -0.04 -0.14 -0.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.003
+          }
+        }
+      ]
+      name "Infrared_Sensor_Front_Right"
+    }
+    Solid {
+      translation 0.13 0 -0.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.003
+          }
+        }
+      ]
+      name "Infrared_Sensor_Left_Middle"
+    }
+    Solid {
+      translation -0.13 0 -0.25
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.003
+          }
+        }
+      ]
+      name "Infrared_Sensor_Right_Middle"
+    }
+    DistanceSensor {
+      translation 0.04 -0.14 -0.25
+      rotation 0 1 0 1.5708
+      name "Distance_Sensor_Front_Left"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.14 -0.25
+      rotation 0 1 0 1.5708
+      name "Distance_Sensor_Front_Middle"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.04 -0.14 -0.25
+      rotation 0 1 0 1.5708
+      name "Distance_Sensor_Front_Right"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.13 0 -0.25
+      rotation 0 1 0 1.5708
+      name "Distance_Sensor_Right_Middle"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0.13 0 -0.25
+      rotation 0 1 0 1.5708
+      name "Distance_Sensor_Left_Middle"
+      type "infra-red"
+    }
+    LED {
+      translation 0 0 -0.15
+      children [
+        Shape {
+          appearance PBRAppearance {
+            metalness 0
+            emissiveIntensity 4
+          }
+          geometry Capsule {
+            height 0.03
+            radius 0.02
+          }
+        }
+      ]
+      color [
+        1 0 0
+        0 1 0
+      ]
+    }
+    LED {
+      translation -0.15 0 -0.19
+      rotation 0 1 0 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            metalness 0
+            emissiveIntensity 4
+          }
+          geometry Capsule {
+            height 0.03
+            radius 0.02
+          }
+        }
+      ]
+      name "led_right"
+      color [
+        1 0 0
+        0 1 0
+      ]
+    }
+    LED {
+      translation 0.15 0 -0.19
+      rotation 0 1 0 -1.5707953071795862
+      children [
+        Shape {
+          appearance PBRAppearance {
+            metalness 0
+            emissiveIntensity 4
+          }
+          geometry Capsule {
+            height 0.03
+            radius 0.02
+          }
+        }
+      ]
+      name "led_left"
+      color [
+        1 0 0
+        0 1 0
+      ]
+    }
+    Receiver {
+      name "robot_receiver"
+    }
+    GPS {
+      name "robot_gps"
+    }
+    Emitter {
+      name "robot_emitter"
+    }
+    InertialUnit {
+    }
+  ]
+  boundingObject Pose {
+    translation 0 0 -0.2
+    children [
+      USE Main_Body
+    ]
+  }
+  physics Physics {
+  }
+  controller "my_controller"
+  supervisor TRUE
+  linearVelocity 4.686000003469439e-15 4.403149770004579e-16 -1.3569155675616859e-12
+  angularVelocity -4.736951598669356e-15 4.926429634607782e-15 5.605231148090894e-15
+}
+Robot {
+  children [
+    DEF Main_house Solid {
+      children [
+        BungalowStyleHouse {
+          translation -1.41 -8.78 0.04
+          name "bungalow style house(1)"
+          scale 0.03
+        }
+        BungalowStyleHouse {
+          translation -3.14 -8.71 0.04
+          name "bungalow style house(2)"
+          scale 0.03
+        }
+        BungalowStyleHouse {
+          translation -4.83 -5.55 0.08
+          rotation 0 0 1 -1.5707953071795862
+          scale 0.03
+        }
+        BungalowStyleHouse {
+          translation -0.02 -8.71 0.08
+          rotation 0 0 1 3.14159
+          name "bungalow style house(3)"
+          scale 0.03
+        }
+      ]
+      name "house_1"
+    }
+    Emitter {
+      translation -1.6 -8.64 0.04
+      name "house_emitter1"
+    }
+    Receiver {
+      translation -1.54 -8.61 0
+      name "house_receiver1"
+    }
+  ]
+  name "house_controller"
+  controller "my_house1_buy_syetem"
+  supervisor TRUE
+}
+Robot {
+  children [
+    DEF traffic_light Solid {
+      translation -1.48 -11.51 0.26
+      children [
+        Solid {
+          translation 0 0 -0.13
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.1 0.3
+              }
+            }
+          ]
+          name "hold"
+        }
+        Solid {
+          children [
+            DEF light_back Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.3 0.1
+              }
+            }
+          ]
+          name "light_back"
+        }
+        LED {
+          translation 0.04 -0.1 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_red"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+        LED {
+          translation 0.04 -0.01 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_yellow"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+        LED {
+          translation 0.04 0.08 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_green"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+      ]
+      name "traffic_light_solid"
+    }
+    DEF traffic_light Solid {
+      translation -3.33 -11.51 0.26
+      children [
+        Solid {
+          translation 0 0 -0.13
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.1 0.3
+              }
+            }
+          ]
+          name "hold"
+        }
+        Solid {
+          children [
+            DEF light_back Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.3 0.1
+              }
+            }
+          ]
+          name "light_back"
+        }
+        LED {
+          translation 0.04 -0.1 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_red"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+        LED {
+          translation 0.04 -0.01 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_yellow"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+        LED {
+          translation 0.04 0.08 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_green"
+          color [
+            1 0 0
+            0 1 0
+          ]
+        }
+      ]
+      name "traffic_light_solid(1)"
+    }
+    DEF traffic_light Solid {
+      translation -0.06 -11.93 0.35
+      rotation 0.0036138716983296877 9.589734506671008e-09 -0.9999934699443532 -5.307179586466759e-06
+      children [
+        Solid {
+          translation 0 0 -0.13
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.1 0.3
+              }
+            }
+          ]
+          name "hold"
+        }
+        Solid {
+          children [
+            DEF light_back Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Box {
+                size 0.1 0.3 0.1
+              }
+            }
+          ]
+          name "light_back"
+        }
+        LED {
+          translation 0.04 -0.1 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_red"
+          color [
+            1 0 0
+            0 0 0
+          ]
+        }
+        LED {
+          translation 0.04 -0.01 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_yellow"
+          color [
+            1 1 0
+            0 0 0
+          ]
+        }
+        LED {
+          translation 0.04 0.08 5.19723e-15
+          rotation 0 1 0 -1.5707953071795862
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+                emissiveColor 0 1 0
+                emissiveIntensity 4
+              }
+              geometry Capsule {
+                height 0.03
+                radius 0.02
+              }
+            }
+          ]
+          name "led_green"
+          color [
+            0 1 0
+            0 0 0
+          ]
+        }
+      ]
+      name "traffic_light_solid(2)"
+    }
+  ]
+  name "traffic_light"
+  controller "my_traffic_light_controller"
+}

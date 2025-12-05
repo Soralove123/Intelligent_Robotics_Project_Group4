@@ -1,0 +1,8 @@
+Location: Loading Bay A
+Best decision:['TurnRight', 'TurnLeft', 'TurnLeft', 'TurnLeft', 'GoStraight']
+Location: Loading Bay B
+Best decision:['GoStraight', 'GoStraight', 'TurnRight', 'TurnRight', 'TurnRight', 'TurnLeft', 'GoStraight', 'GoStraight']
+Location: Loading Bay C
+Best decision:['GoStraight', 'GoStraight', 'GoStraight', 'TurnLeft', 'GoStraight', 'TurnRight', 'GoStraight', 'GoStraight', 'GoStraight', 'GoStraight']
+Location: Loading Bay D
+Best decision:['TurnRight', 'TurnLeft', 'TurnLeft', 'TurnLeft', 'GoStraight']

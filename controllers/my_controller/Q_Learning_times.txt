@@ -1,0 +1,4 @@
+Loading Bay A: Learning Times: 10
+Loading Bay B: Learning Times: 10
+Loading Bay C: Learning Times: 10
+Loading Bay D: Learning Times: 10
