@@ -10,7 +10,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.25100769963546044 -0.04992107896134421 0.9666969642028725 3.135792729834022
-  position 5.9365584498362285 -10.467288151860396 3.9497415539412284
+  position 8.218690119557639 -10.547367920635851 5.216186997758697
 }
 Background {
   skyColor [
@@ -38,7 +38,7 @@ RectangleArena {
   floorAppearance PBRAppearance {
     baseColorMap ImageTexture {
       url [
-        "C:/Users/27424/Desktop/map3.png"
+        "../Maps/map3.png"
       ]
     }
     roughness 1
@@ -93,8 +93,6 @@ Robot {
         boundingObject USE Wheel_1
         physics Physics {
         }
-        linearVelocity 3.315567764281316e-15 7.191064373683951e-16 2.692491419161632e-10
-        angularVelocity -5.916560725946428e-15 4.383168309568886e-14 5.847594672517852e-15
       }
     }
     HingeJoint {
@@ -126,8 +124,6 @@ Robot {
         boundingObject USE Wheel_2
         physics Physics {
         }
-        linearVelocity -1.743877919857991e-15 -2.9027896533583736e-16 2.6924964452231286e-10
-        angularVelocity -4.628388883252536e-15 8.766367207135375e-14 5.476253111036595e-15
       }
     }
     HingeJoint {
@@ -159,8 +155,6 @@ Robot {
         boundingObject USE Wheel_3
         physics Physics {
         }
-        linearVelocity 4.473572150636356e-15 5.150550644285165e-16 2.6925064973465326e-10
-        angularVelocity -5.1616885882384175e-15 6.574768166794123e-14 5.255604735996198e-15
       }
     }
     HingeJoint {
@@ -192,8 +186,6 @@ Robot {
         boundingObject USE Wheel_4
         physics Physics {
         }
-        linearVelocity -1.7496799096472803e-15 -1.8263163271048073e-16 2.692481367037785e-10
-        angularVelocity -5.222085732482896e-15 4.3831713854769756e-14 6.131007796020333e-15
       }
     }
     Solid {
@@ -734,7 +726,6 @@ Robot {
             Shape {
               appearance PBRAppearance {
                 metalness 0
-                emissiveColor 0 1 0
                 emissiveIntensity 4
               }
               geometry Capsule {
